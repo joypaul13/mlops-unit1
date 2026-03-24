@@ -42,4 +42,15 @@ for col in numerical_cols:
     print(f"  Max: {df[col].max()}")
     print(f"  Range: {df[col].max() - df[col].min()}")
 
+# Categorical columns
+categorical_cols = df.select_dtypes(include=['object']).columns
+
+if len(categorical_cols) > 0:
+    print("\n" + "=" * 60)
+    print("CATEGORICAL DATA")
+    print("=" * 60)
+    for col in categorical_cols:
+        print(f"\n{col.upper()} - Value Counts:")
+        print(df[col].value_counts())
+
 print("\n" + "=" * 60)
