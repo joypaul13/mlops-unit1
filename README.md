@@ -14,21 +14,16 @@ mlops-unit1/
 │   ├── __init__.py
 │   ├── data/                     # Data loading and preprocessing
 │   │   ├── __init__.py
-│   │   ├── load.py              # Data loading utilities
-│   │   └── preprocess.py        # Data preprocessing (future)
+│   │   └── load.py              # Data loading utilities
 │   ├── models/                   # Model training and inference
 │   │   ├── __init__.py
+│   │   ├── ml_model.py          # Complete ML workflow script
 │   │   ├── train.py             # Model training logic
 │   │   └── predict.py           # Model prediction and loading
 │   └── features/                 # Feature engineering
 │       └── __init__.py
 ├── models/                        # Trained model artifacts
 │   └── salary_prediction_model.joblib
-├── notebooks/                     # Jupyter notebooks for EDA
-├── tests/                         # Unit tests
-├── logs/                          # Log files
-├── config/                        # Configuration files
-│   └── config.yaml
 ├── stats.py                       # Data statistics script
 ├── requirements.txt               # Python dependencies
 ├── .gitignore                     # Git ignore rules
@@ -133,29 +128,12 @@ Complete ML workflow including:
 python src/models/ml_model.py
 ```
 
-## 🔧 Configuration
-
-See `config/config.yaml` for project configuration including:
-- Data paths
-- Model parameters
-- Training settings
-- Logging configuration
-
-## 📚 Dependencies
+##  Dependencies
 
 - pandas: Data manipulation
 - numpy: Numerical computing
 - scikit-learn: Machine learning
 - joblib: Model serialization
-- pytest: Testing framework
-- python-dotenv: Environment variables
-
-## 🧪 Testing
-
-Run tests using pytest:
-```bash
-pytest tests/
-```
 
 ## 📊 Data Analysis
 
@@ -169,10 +147,6 @@ python stats.py
 - **Main Branch:** Production-ready code
 - **Feature Branches:** Development branches for new features
 - **Commits:** Descriptive commit messages for tracking changes
-
-## 📝 Logs
-
-Application logs are stored in the `logs/` directory.
 
 ## 🤝 Contributing
 
@@ -194,8 +168,6 @@ This project is part of MLOps Unit 1 training material.
 - [x] Evaluation metrics
 - [x] Model persistence
 - [x] Project structure
-- [x] Configuration management
-- [ ] Unit tests
 - [ ] CI/CD pipeline
 - [ ] Model monitoring
 - [ ] Docker containerization
@@ -207,7 +179,6 @@ Created by: Joy Paul
 ## 🎯 Next Steps
 
 1. Improve model performance with feature engineering
-2. Add unit tests for all modules
-3. Set up CI/CD pipeline
-4. Add model serving API
-5. Implement model monitoring
+2. Set up CI/CD pipeline
+3. Add model serving API
+4. Implement model monitoring
