@@ -1,0 +1,29 @@
+# MLOps Project Configuration
+
+project:
+  name: Salary Prediction Model
+  version: 1.0.0
+  description: Linear Regression model to predict employee salary
+
+data:
+  raw_data_path: data/raw/sample_data.csv
+  processed_data_path: data/processed/
+  target_column: salary
+  feature_columns:
+    - age
+    - experience
+
+model:
+  type: LinearRegression
+  model_path: models/salary_prediction_model.joblib
+  test_size: 0.2
+  random_state: 42
+
+training:
+  epochs: 1
+  batch_size: 32
+  validation_split: 0.2
+
+logging:
+  log_path: logs/
+  log_level: INFO
